@@ -22,15 +22,15 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"com.sech.framework.business.admin", "com.sech.framework.core", "com.sech.framework.business.commons.web"})
-public class FwAdminApplication extends SpringBootServletInitializer {
+public class SechAdminApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(FwAdminApplication.class);
+        return application.sources(SechAdminApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(FwAdminApplication.class, args);
+        SpringApplication.run(SechAdminApplication.class, args);
     }
 
 }

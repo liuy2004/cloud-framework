@@ -15,7 +15,7 @@ import java.util.List;
 @Configuration
 @ConditionalOnExpression("!'${urls}'.isEmpty()")
 @ConfigurationProperties(prefix = "urls")
-public class FwUrlsConfiguration {
+public class SechUrlsConfiguration {
 
     private List<String> collects = new ArrayList<>();
 

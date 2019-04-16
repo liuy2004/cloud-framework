@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 @Configuration
 @EnableScheduling
-public class FwNotifierConfiguration {
+public class SechNotifierConfiguration {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;

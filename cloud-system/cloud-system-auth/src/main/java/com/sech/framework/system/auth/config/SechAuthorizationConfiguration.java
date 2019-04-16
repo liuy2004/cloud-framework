@@ -33,7 +33,7 @@ import java.util.Map;
 @Configuration
 @Order(Integer.MIN_VALUE)
 @EnableAuthorizationServer
-public class FwAuthorizationConfiguration extends AuthorizationServerConfigurerAdapter {
+public class SechAuthorizationConfiguration extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private AuthServerConfiguration authServerConfiguration;
@@ -85,7 +85,7 @@ public class FwAuthorizationConfiguration extends AuthorizationServerConfigurerA
 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
-        FwJwtAccessTokenConverter jwtAccessTokenConverter = new FwJwtAccessTokenConverter();
+        SechJwtAccessTokenConverter jwtAccessTokenConverter = new SechJwtAccessTokenConverter();
         jwtAccessTokenConverter.setSigningKey(jwtConfiguration.getJwtkey());
         // log.info("Initializing JWT with public key:\n" + authServerConfiguration.getPublicKey());
 
@@ -97,7 +97,8 @@ public class FwAuthorizationConfiguration extends AuthorizationServerConfigurerA
     }
 
     /**
-     * tokenstore 定制化处理 1. 如果使用的 redis-cluster 模式请使用 FwRedisTokenStore FwRedisTokenStore tokenStore = new FwRedisTokenStore(); tokenStore.setRedisTemplate(redisTemplate);
+     * tokenstore 定制化处理
+     * 1. 如果使用的 redis-cluster 模式请使用 SechRedisTokenStore SechRedisTokenStore tokenStore = new SechRedisTokenStore(); tokenStore.setRedisTemplate(redisTemplate);
      */
     @Bean
     public TokenStore redisTokenStore() {

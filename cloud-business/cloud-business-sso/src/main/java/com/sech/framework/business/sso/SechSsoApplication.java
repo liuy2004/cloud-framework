@@ -12,14 +12,11 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * @author sech.io
  */
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableOAuth2Sso
 @ComponentScan(basePackages = {"com.sech.framework.business.sso"})
-public class FwSsoApplication {
-
+public class SechSsoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(FwSsoApplication.class, args);
+        SpringApplication.run(SechSsoApplication.class, args);
     }
-
 }

@@ -20,15 +20,15 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableDiscoveryClient
 @EnableFeignClients
 @ComponentScan(basePackages = {"com.sech.framework.system.auth", "com.sech.framework.core"})
-public class FwAuthApplication extends SpringBootServletInitializer {
+public class SechAuthApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(FwAuthApplication.class);
+        return application.sources(SechAuthApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(FwAuthApplication.class, args);
+        SpringApplication.run(SechAuthApplication.class, args);
     }
 
 }

@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 
 import java.util.Map;
 
-public class FwJwtAccessTokenConverter extends JwtAccessTokenConverter {
+public class SechJwtAccessTokenConverter extends JwtAccessTokenConverter {
 
     @SuppressWarnings("unchecked")
     @Override

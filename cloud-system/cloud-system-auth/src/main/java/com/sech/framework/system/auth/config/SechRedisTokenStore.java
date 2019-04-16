@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class FwRedisTokenStore implements TokenStore {
+public class SechRedisTokenStore implements TokenStore {
 
     private static final String ACCESS = "access:";
     private static final String AUTH_TO_ACCESS = "auth_to_access:";

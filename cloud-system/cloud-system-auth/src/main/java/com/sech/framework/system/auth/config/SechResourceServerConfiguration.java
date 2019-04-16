@@ -1,6 +1,6 @@
 package com.sech.framework.system.auth.config;
 
-import com.sech.framework.core.configuration.FwUrlsConfiguration;
+import com.sech.framework.core.configuration.SechUrlsConfiguration;
 import com.sech.framework.system.auth.component.ajax.AjaxSecurityConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
@@ -18,10 +18,10 @@ import org.springframework.security.config.annotation.web.configurers.Expression
 @Configuration
 // @EnableResourceServer
 @EnableWebSecurity
-public class FwResourceServerConfiguration extends WebSecurityConfigurerAdapter {// ResourceServerConfigurerAdapter {
+public class SechResourceServerConfiguration extends WebSecurityConfigurerAdapter {// ResourceServerConfigurerAdapter {
 
     @Autowired
-    private FwUrlsConfiguration fwUrlsConfiguration;
+    private SechUrlsConfiguration sechUrlsConfiguration;
 
     @Autowired
     private AjaxSecurityConfigurer ajaxSecurityConfigurer;
@@ -34,7 +34,7 @@ public class FwResourceServerConfiguration extends WebSecurityConfigurerAdapter 
                 .loginPage("/auth/login").loginProcessingUrl("/auth/signin").and()
                 .authorizeRequests();
 
-        for (String url : fwUrlsConfiguration.getCollects()) {
+        for (String url : sechUrlsConfiguration.getCollects()) {
             registry.antMatchers(url).permitAll();
         }
 

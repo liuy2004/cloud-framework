@@ -1,6 +1,6 @@
 package com.sech.framework.system.gateway.config;
 
-import com.sech.framework.core.configuration.FwUrlsConfiguration;
+import com.sech.framework.core.configuration.SechUrlsConfiguration;
 import com.sech.framework.system.gateway.filter.ValidateCodeFilter;
 import com.sech.framework.system.gateway.handler.AccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
     @Autowired
-    private FwUrlsConfiguration urlsConfiguration;
+    private SechUrlsConfiguration urlsConfiguration;
 
     @Autowired
     private OAuth2WebSecurityExpressionHandler expressionHandler;

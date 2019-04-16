@@ -13,15 +13,15 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @EnableEurekaServer
 @SpringBootApplication
-public class FwEurekaApplication extends SpringBootServletInitializer {
+public class SechEurekaApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(FwEurekaApplication.class);
+        return application.sources(SechEurekaApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(FwEurekaApplication.class, args);
+        SpringApplication.run(SechEurekaApplication.class, args);
     }
 
 }

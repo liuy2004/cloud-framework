@@ -23,15 +23,15 @@ import java.util.concurrent.TimeUnit;
 @EnableTurbine
 @EnableDiscoveryClient
 @SpringCloudApplication
-public class FwMonitorApplication extends SpringBootServletInitializer {
+public class SechMonitorApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(FwMonitorApplication.class);
+        return application.sources(SechMonitorApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(FwMonitorApplication.class, args);
+        SpringApplication.run(SechMonitorApplication.class, args);
     }
 
     @Configuration

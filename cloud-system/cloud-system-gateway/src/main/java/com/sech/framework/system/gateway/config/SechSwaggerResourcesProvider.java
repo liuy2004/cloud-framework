@@ -14,11 +14,11 @@ import java.util.List;
 
 @Component
 @Primary
-public class FwSwaggerResourcesProvider implements SwaggerResourcesProvider {
+public class SechSwaggerResourcesProvider implements SwaggerResourcesProvider {
 
     private final RouteLocator routeLocator;
 
-    public FwSwaggerResourcesProvider(RouteLocator routeLocator) {
+    public SechSwaggerResourcesProvider(RouteLocator routeLocator) {
         this.routeLocator = routeLocator;
     }
 

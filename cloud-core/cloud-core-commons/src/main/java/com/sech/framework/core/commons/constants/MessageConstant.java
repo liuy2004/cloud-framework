@@ -1,7 +1,7 @@
 package com.sech.framework.core.commons.constants;
 
 /**
- * 自定义消息常量 SYSTEM_AUTH 开头对应 fw-cloud-system-auth-xxx BUSINESS_ADMIN 开头对应 fw-cloud-business-admin-xxx
+ * 自定义消息常量 SYSTEM_AUTH 开头对应 cloud-system-auth-xxx BUSINESS_ADMIN 开头对应 cloud-business-admin-xxx
  *
  * @author sech.io
  */

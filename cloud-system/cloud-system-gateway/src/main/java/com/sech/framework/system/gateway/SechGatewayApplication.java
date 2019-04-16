@@ -22,15 +22,15 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @SpringCloudApplication
 @ComponentScan(basePackages = {"com.sech.framework.system.gateway", "com.sech.framework.core"})
-public class FwGatewayApplication extends SpringBootServletInitializer {
+public class SechGatewayApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(FwGatewayApplication.class);
+        return application.sources(SechGatewayApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(FwGatewayApplication.class, args);
+        SpringApplication.run(SechGatewayApplication.class, args);
     }
 
     @Bean
