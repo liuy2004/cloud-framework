@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sech.core</groupId>
+    <artifactId>cloud-core</artifactId>
+    <packaging>pom</packaging>
+    <version>${cloud.framework.core.version}</version>
+
+    <name>cloud-core</name>
+    <description>核心基础公共模块</description>
+
+    <parent>
+    	<groupId>com.sech</groupId>
+        <artifactId>cloud-framework</artifactId>
+        <version>${cloud.framework.version}</version>
+    </parent>
+
+	<modules>
+		<module>cloud-core-commons</module>
+		<module>cloud-core-utils</module>
+        <module>cloud-core-beans</module>
+        <module>cloud-core-configuration</module>
+        <module>cloud-core-exception</module>
+	</modules>
+
+</project>

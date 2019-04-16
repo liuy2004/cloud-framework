@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sech.system</groupId>
+    <artifactId>cloud-system</artifactId>
+    <packaging>pom</packaging>
+    <version>${cloud.framework.system.version}</version>
+
+    <name>cloud-system</name>
+    <description>系统模块</description>
+
+    <parent>
+    	<groupId>com.sech</groupId>
+        <artifactId>cloud-framework</artifactId>
+        <version>${cloud.framework.version}</version>
+    </parent>
+
+	<modules>
+		<!-- system-commons 系统公共模块 -->
+		<module>cloud-system-commons</module>
+		
+		<!-- system 系统相关的服务 -->
+		<module>cloud-system-eureka</module>
+		<module>cloud-system-config</module>
+		<module>cloud-system-auth</module>
+		<module>cloud-system-gateway</module>
+	</modules>
+</project>

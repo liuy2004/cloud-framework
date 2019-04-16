@@ -1,0 +1,8 @@
+FROM java:8
+MAINTAINER cloud-framework <ovrn@live.com>
+
+ADD ./cloud-wechat/fw-cloud-business-wechat.jar /app/
+
+CMD ["java", "-Xmx300m", "-jar", "/app/fw-cloud-business-wechat.jar"]
+
+EXPOSE 2004
