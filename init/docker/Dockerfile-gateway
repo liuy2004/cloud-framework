@@ -1,8 +1,8 @@
 FROM java:8
 MAINTAINER cloud-framework <ovrn@live.com>
 
-ADD ./cloud-gateway/fw-cloud-system-gateway.jar /app/
+ADD ./cloud-gateway/cloud-system-gateway.jar /app/
 
-CMD ["java", "-Xmx300m", "-jar", "/app/fw-cloud-system-gateway.jar"]
+CMD ["java", "-Xmx300m", "-jar", "/app/cloud-system-gateway.jar"]
 
 EXPOSE 1003

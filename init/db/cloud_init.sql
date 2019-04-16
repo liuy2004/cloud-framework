@@ -10,15 +10,15 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- 导出 fw-cloud 的数据库结构
-DROP DATABASE IF EXISTS `fw-cloud`;
-CREATE DATABASE IF NOT EXISTS `fw-cloud` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `fw-cloud`;
+-- 导出 cloud 的数据库结构
+DROP DATABASE IF EXISTS `cloud`;
+CREATE DATABASE IF NOT EXISTS `cloud` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `cloud`;
 
 SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
 
--- 导出  表 fw-cloud.t_sys_dept 结构
+-- 导出  表 cloud.t_sys_dept 结构
 DROP TABLE IF EXISTS `t_sys_dept`;
 CREATE TABLE IF NOT EXISTS `t_sys_dept` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_dept` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='部门管理';
 
--- 正在导出表  fw-cloud.t_sys_dept 的数据：~9 rows (大约)
+-- 正在导出表  cloud.t_sys_dept 的数据：~9 rows (大约)
 DELETE FROM `t_sys_dept`;
 /*!40000 ALTER TABLE `t_sys_dept` DISABLE KEYS */;
 INSERT INTO `t_sys_dept` (`id`, `pid`, `dept_name`, `statu`, `pos`, `create_time`, `update_time`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `t_sys_dept` (`id`, `pid`, `dept_name`, `statu`, `pos`, `create_time
 /*!40000 ALTER TABLE `t_sys_dept` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_dept_relation 结构
+-- 导出  表 cloud.t_sys_dept_relation 结构
 DROP TABLE IF EXISTS `t_sys_dept_relation`;
 CREATE TABLE IF NOT EXISTS `t_sys_dept_relation` (
   `pre_id` int(11) NOT NULL COMMENT '节点',
@@ -57,13 +57,13 @@ CREATE TABLE IF NOT EXISTS `t_sys_dept_relation` (
   KEY `after_id` (`after_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- 正在导出表  fw-cloud.t_sys_dept_relation 的数据：~0 rows (大约)
+-- 正在导出表  cloud.t_sys_dept_relation 的数据：~0 rows (大约)
 DELETE FROM `t_sys_dept_relation`;
 /*!40000 ALTER TABLE `t_sys_dept_relation` DISABLE KEYS */;
 /*!40000 ALTER TABLE `t_sys_dept_relation` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_dict 结构
+-- 导出  表 cloud.t_sys_dict 结构
 DROP TABLE IF EXISTS `t_sys_dict`;
 CREATE TABLE IF NOT EXISTS `t_sys_dict` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_dict` (
   KEY `t_sys_dict_type` (`type`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='字典表';
 
--- 正在导出表  fw-cloud.t_sys_dict 的数据：~6 rows (大约)
+-- 正在导出表  cloud.t_sys_dict 的数据：~6 rows (大约)
 DELETE FROM `t_sys_dict`;
 /*!40000 ALTER TABLE `t_sys_dict` DISABLE KEYS */;
 INSERT INTO `t_sys_dict` (`id`, `type`, `value`, `label`, `statu`) VALUES
@@ -87,7 +87,7 @@ INSERT INTO `t_sys_dict` (`id`, `type`, `value`, `label`, `statu`) VALUES
 	(6, 'SEX', '1', '女', 0);
 /*!40000 ALTER TABLE `t_sys_dict` ENABLE KEYS */;
 
--- 导出  表 fw-cloud.t_sys_log_0 结构
+-- 导出  表 cloud.t_sys_log_0 结构
 DROP TABLE IF EXISTS `t_sys_log_0`;
 CREATE TABLE IF NOT EXISTS `t_sys_log_0` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
@@ -112,12 +112,12 @@ CREATE TABLE IF NOT EXISTS `t_sys_log_0` (
   KEY `t_sys_log_0_create_date` (`create_time`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='日志表';
 
--- 正在导出表  fw-cloud.t_sys_log_0 的数据：~0 rows (大约)
+-- 正在导出表  cloud.t_sys_log_0 的数据：~0 rows (大约)
 DELETE FROM `t_sys_log_0`;
 /*!40000 ALTER TABLE `t_sys_log_0` DISABLE KEYS */;
 /*!40000 ALTER TABLE `t_sys_log_0` ENABLE KEYS */;
 
--- 导出  表 fw-cloud.t_sys_log_1 结构
+-- 导出  表 cloud.t_sys_log_1 结构
 DROP TABLE IF EXISTS `t_sys_log_1`;
 CREATE TABLE IF NOT EXISTS `t_sys_log_1` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
@@ -142,13 +142,13 @@ CREATE TABLE IF NOT EXISTS `t_sys_log_1` (
   KEY `t_sys_log_1_create_date` (`create_time`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='日志表';
 
--- 正在导出表  fw-cloud.t_sys_log_1 的数据：~0 rows (大约)
+-- 正在导出表  cloud.t_sys_log_1 的数据：~0 rows (大约)
 DELETE FROM `t_sys_log_1`;
 /*!40000 ALTER TABLE `t_sys_log_1` DISABLE KEYS */;
 /*!40000 ALTER TABLE `t_sys_log_1` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_menu 结构
+-- 导出  表 cloud.t_sys_menu 结构
 DROP TABLE IF EXISTS `t_sys_menu`;
 CREATE TABLE IF NOT EXISTS `t_sys_menu` (
   `menu_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '菜单ID',
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_menu` (
   PRIMARY KEY (`menu_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COMMENT='菜单权限表';
 
--- 正在导出表  fw-cloud.t_sys_menu 的数据：~14 rows (大约)
+-- 正在导出表  cloud.t_sys_menu 的数据：~14 rows (大约)
 DELETE FROM `t_sys_menu`;
 /*!40000 ALTER TABLE `t_sys_menu` DISABLE KEYS */;
 INSERT INTO `t_sys_menu` (`menu_id`, `menu_name`, `path`, `url`, `pid`, `create_time`, `update_time`, `statu`) VALUES
@@ -183,7 +183,7 @@ INSERT INTO `t_sys_menu` (`menu_id`, `menu_name`, `path`, `url`, `pid`, `create_
 /*!40000 ALTER TABLE `t_sys_menu` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_module 结构
+-- 导出  表 cloud.t_sys_module 结构
 DROP TABLE IF EXISTS `t_sys_module`;
 CREATE TABLE IF NOT EXISTS `t_sys_module` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键，自动增量',
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_module` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- 正在导出表  fw-cloud.t_sys_module 的数据：~6 rows (大约)
+-- 正在导出表  cloud.t_sys_module 的数据：~6 rows (大约)
 DELETE FROM `t_sys_module`;
 /*!40000 ALTER TABLE `t_sys_module` DISABLE KEYS */;
 INSERT INTO `t_sys_module` (`id`, `code`, `name`) VALUES
@@ -205,7 +205,7 @@ INSERT INTO `t_sys_module` (`id`, `code`, `name`) VALUES
 /*!40000 ALTER TABLE `t_sys_module` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_role 结构
+-- 导出  表 cloud.t_sys_role 结构
 DROP TABLE IF EXISTS `t_sys_role`;
 CREATE TABLE IF NOT EXISTS `t_sys_role` (
   `role_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_role` (
   UNIQUE KEY `role_idx1_role_code` (`role_code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- 正在导出表  fw-cloud.t_sys_role 的数据：~3 rows (大约)
+-- 正在导出表  cloud.t_sys_role 的数据：~3 rows (大约)
 DELETE FROM `t_sys_role`;
 /*!40000 ALTER TABLE `t_sys_role` DISABLE KEYS */;
 INSERT INTO `t_sys_role` (`role_id`, `role_name`, `role_code`, `role_desc`, `create_time`, `update_time`, `statu`) VALUES
@@ -229,7 +229,7 @@ INSERT INTO `t_sys_role` (`role_id`, `role_name`, `role_code`, `role_desc`, `cre
 /*!40000 ALTER TABLE `t_sys_role` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_role_dept 结构
+-- 导出  表 cloud.t_sys_role_dept 结构
 DROP TABLE IF EXISTS `t_sys_role_dept`;
 CREATE TABLE IF NOT EXISTS `t_sys_role_dept` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
@@ -238,7 +238,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_role_dept` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='角色与部门对应关系';
 
--- 正在导出表  fw-cloud.t_sys_role_dept 的数据：~1 rows (大约)
+-- 正在导出表  cloud.t_sys_role_dept 的数据：~1 rows (大约)
 DELETE FROM `t_sys_role_dept`;
 /*!40000 ALTER TABLE `t_sys_role_dept` DISABLE KEYS */;
 INSERT INTO `t_sys_role_dept` (`id`, `role_id`, `dept_id`) VALUES
@@ -246,7 +246,7 @@ INSERT INTO `t_sys_role_dept` (`id`, `role_id`, `dept_id`) VALUES
 /*!40000 ALTER TABLE `t_sys_role_dept` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_role_menu 结构
+-- 导出  表 cloud.t_sys_role_menu 结构
 DROP TABLE IF EXISTS `t_sys_role_menu`;
 CREATE TABLE IF NOT EXISTS `t_sys_role_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -255,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_role_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=188 DEFAULT CHARSET=utf8 COMMENT='角色菜单表';
 
--- 正在导出表  fw-cloud.t_sys_role_menu 的数据：~21 rows (大约)
+-- 正在导出表  cloud.t_sys_role_menu 的数据：~21 rows (大约)
 DELETE FROM `t_sys_role_menu`;
 /*!40000 ALTER TABLE `t_sys_role_menu` DISABLE KEYS */;
 INSERT INTO `t_sys_role_menu` (`id`, `role_id`, `menu_id`) VALUES
@@ -283,7 +283,7 @@ INSERT INTO `t_sys_role_menu` (`id`, `role_id`, `menu_id`) VALUES
 /*!40000 ALTER TABLE `t_sys_role_menu` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_role_menu_permission 结构
+-- 导出  表 cloud.t_sys_role_menu_permission 结构
 DROP TABLE IF EXISTS `t_sys_role_menu_permission`;
 CREATE TABLE IF NOT EXISTS `t_sys_role_menu_permission` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
@@ -292,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_role_menu_permission` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=416 DEFAULT CHARSET=utf8 COMMENT='功能权限表';
 
--- 正在导出表  fw-cloud.t_sys_role_menu_permission 的数据：~92 rows (大约)
+-- 正在导出表  cloud.t_sys_role_menu_permission 的数据：~92 rows (大约)
 DELETE FROM `t_sys_role_menu_permission`;
 /*!40000 ALTER TABLE `t_sys_role_menu_permission` DISABLE KEYS */;
 INSERT INTO `t_sys_role_menu_permission` (`id`, `role_menu_id`, `permission`) VALUES
@@ -378,7 +378,7 @@ INSERT INTO `t_sys_role_menu_permission` (`id`, `role_menu_id`, `permission`) VA
 	(496, 209, 'dept_view');
 /*!40000 ALTER TABLE `t_sys_role_menu_permission` ENABLE KEYS */;
 
--- 导出  表 fw-cloud.t_sys_user 结构
+-- 导出  表 cloud.t_sys_user 结构
 DROP TABLE IF EXISTS `t_sys_user`;
 CREATE TABLE IF NOT EXISTS `t_sys_user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -394,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_user` (
   UNIQUE KEY `user_idx1_username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC COMMENT='用户表';
 
--- 正在导出表  fw-cloud.t_sys_user 的数据：~7 rows (大约)
+-- 正在导出表  cloud.t_sys_user 的数据：~7 rows (大约)
 DELETE FROM `t_sys_user`;
 /*!40000 ALTER TABLE `t_sys_user` DISABLE KEYS */;
 INSERT INTO `t_sys_user` (`user_id`, `username`, `password`, `open_id`, `mobile`, `pic_url`, `statu`, `create_time`, `update_time`) VALUES
@@ -408,7 +408,7 @@ INSERT INTO `t_sys_user` (`user_id`, `username`, `password`, `open_id`, `mobile`
 /*!40000 ALTER TABLE `t_sys_user` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.t_sys_user_role 结构
+-- 导出  表 cloud.t_sys_user_role 结构
 DROP TABLE IF EXISTS `t_sys_user_role`;
 CREATE TABLE IF NOT EXISTS `t_sys_user_role` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -417,7 +417,7 @@ CREATE TABLE IF NOT EXISTS `t_sys_user_role` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='用户角色表';
 
--- 正在导出表  fw-cloud.t_sys_user_role 的数据：~9 rows (大约)
+-- 正在导出表  cloud.t_sys_user_role 的数据：~9 rows (大约)
 DELETE FROM `t_sys_user_role`;
 /*!40000 ALTER TABLE `t_sys_user_role` DISABLE KEYS */;
 INSERT INTO `t_sys_user_role` (`id`, `user_id`, `role_id`) VALUES
@@ -433,7 +433,7 @@ INSERT INTO `t_sys_user_role` (`id`, `user_id`, `role_id`) VALUES
 /*!40000 ALTER TABLE `t_sys_user_role` ENABLE KEYS */;
 
 
--- 导出  表 fw-cloud.zipkin_annotations 结构
+-- 导出  表 cloud.zipkin_annotations 结构
 DROP TABLE IF EXISTS `zipkin_annotations`;
 CREATE TABLE IF NOT EXISTS `zipkin_annotations` (
   `trace_id_high` bigint(20) NOT NULL DEFAULT '0' COMMENT 'If non zero, this means the trace uses 128 bit traceIds instead of 64 bit',
@@ -457,7 +457,7 @@ CREATE TABLE IF NOT EXISTS `zipkin_annotations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
 
 
--- 导出  表 fw-cloud.zipkin_dependencies 结构
+-- 导出  表 cloud.zipkin_dependencies 结构
 DROP TABLE IF EXISTS `zipkin_dependencies`;
 CREATE TABLE IF NOT EXISTS `zipkin_dependencies` (
   `day` date NOT NULL,
@@ -469,7 +469,7 @@ CREATE TABLE IF NOT EXISTS `zipkin_dependencies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
 
 
--- 导出  表 fw-cloud.zipkin_spans 结构
+-- 导出  表 cloud.zipkin_spans 结构
 DROP TABLE IF EXISTS `zipkin_spans`;
 CREATE TABLE IF NOT EXISTS `zipkin_spans` (
   `trace_id_high` bigint(20) NOT NULL DEFAULT '0' COMMENT 'If non zero, this means the trace uses 128 bit traceIds instead of 64 bit',

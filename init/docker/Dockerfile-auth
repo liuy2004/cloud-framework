@@ -1,8 +1,8 @@
 FROM java:8
 MAINTAINER cloud-framework <ovrn@live.com>
 
-ADD ./cloud-auth/fw-cloud-system-auth.jar /app/
+ADD ./cloud-auth/cloud-system-auth.jar /app/
 
-CMD ["java", "-Xmx300m", "-jar", "/app/fw-cloud-system-auth.jar"]
+CMD ["java", "-Xmx300m", "-jar", "/app/cloud-system-auth.jar"]
 
 EXPOSE 1004
